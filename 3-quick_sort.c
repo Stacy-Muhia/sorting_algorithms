@@ -65,7 +65,7 @@ void lomuto_sort(int *array, size_t size, int left, int right)
 	{
 		x = lomuto_partition(array, size, left, right);
 		lomuto_sort(array, size, left, x - 1);
-		lomuto_sort(array, size, part + 1, right);
+		lomuto_sort(array, size, x + 1, right);
 	}
 }
 
