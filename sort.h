@@ -20,6 +20,7 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void swap_int(int *a, int *b);
@@ -28,5 +29,7 @@ void node_swp(listint_t **head, listint_t **node1, listint_t *node2);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void lomuto_sort(int *array, size_t size, int left, int right);
+int lomuto_partition(int *array, size_t size, int left, int right);
 
 #endif /*SORT_H*/
